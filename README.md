@@ -47,7 +47,7 @@ You'll need to do three things before you perform step 4 above:
 
    4a) Create your `http_proxy` and `https_proxy` environment variables
 
-Linux:
+**Linux**
 ```
 $ export http_proxy=http://<username>:<password>@proxy.example.com:<port>
 $ export https_proxy=_http://<username>:<password>@proxy.example.com:<port>
@@ -55,7 +55,7 @@ $ export https_proxy=_http://<username>:<password>@proxy.example.com:<port>
 Side Note: if you have special characters in your password you may need to replace them with the [hex values] (http://www.asciitable.com/) instead:
 Ex. `M@tt` becomes `M%40tt`
 
-Windows:
+**Windows**  
 It would be better for you to permanently set your 'http_proxy' and 'https_proxy' User environment variables.  You can do this by:  
 1) Open **Control Panel**  
 2) Select **System**  
