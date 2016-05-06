@@ -1,0 +1,30 @@
+## Secrets
+.env
+*.keytab
+
+## Idea-IntelliJ
+/.idea
+
+## Vagrant
+/.vagrant
+
+## Environment normalisation
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+## Odds & Ends
+*.gem
+*.rbc
+*.png
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+## PhantomJS
+/lib/browsers/phantomjs-2.1.1-linux-x86_64/
