@@ -15,6 +15,7 @@
 
 ## Odds & Ends
 *.gem
+Gemfile.lock
 *.rbc
 *.png
 /.config

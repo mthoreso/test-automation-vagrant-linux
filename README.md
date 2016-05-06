@@ -1,7 +1,13 @@
-# test-automation
+# test-automation-vagrant-linux
 
 This project provides the user with a development environment to run Cucumber tests.  
-The build is Ubuntu/Ruby/Cucumber/Selenium.  In about 10 minutes you can be up and running.
+The build is Ubuntu/Ruby/Cucumber/Selenium/PhantomJS.  In about 10 minutes you can be up and running.
+
+There are a number of Cucumber advanced configurations included to orient the new user with the
+varying capabilities it provides.  
+
+Lastly, there is a working `.feature` file with some passing tests.  However, two unfinished
+`step_definitions` are left for the new user to complete to get them practicing web testing with Selenium.
 
 ## Dependencies
 
@@ -34,8 +40,8 @@ You may now create your own feature files, step_definitions, and other Cucumber 
 
 ## Corporate Proxy
 
-If you are doing this at work and are behind a corporate proxy this all gets more complicated but, 
-don't worry, we can (probably?) handle that here. 
+If you are doing this at work and are behind a corporate proxy this all gets more complicated but,
+don't worry, we can (probably?) handle that here.
 
 You'll need to do three things before you perform step 4 above:
 
@@ -72,34 +78,6 @@ $ vagrant up
 $ vagrant ssh
 ```
 
-## Cucumber Practice
-
-You'll probably notice at this point that Cucumber passed some tests but some are still `pending`.  Yeah, you
-need to become oriented with this new web testing framework and practice your testing skills.
-
-You'll want to read through the three completed step_definitions to figure out how we accomplish the 
-first few tasks spelled out in the `.feature` file.  You'll also want to find where the browser `DRIVER`
-was created that keeps getting reused.  You might also want to find out how Cucumber is starting and
-killing the PhantomJS service that you're utilizing as a headless browser!  And where'd the screenshots
-come from that are located in `/screenshots`?
-
-Here is a nice Ruby-Selenium [cheatsheet] (https://gist.github.com/huangzhichong/3284966) that could help you get started.
-
-Don't forget to finish these step_definitions:
-```
-When(/^the user clicks the cucumber link$/) do
-  pending # Write code here that will find and click the proper link
-  # Hint, you've already found the correct link element above
-  # and it has conveniently been assigned to an instance variable: '@link'
-end
-
-Then(/^that "([^"]*)" is displayed$/) do |webpage|
-  pending # Write code here that verifies we are at the proper URL
-  # Hint, it's easy to capture the current URL of a webpage.
-  # Google 'ruby selenium get current url' to find out how!
-end
-```
-
 ## Vagrant
 
 Your Vagrant machine is now running locally and when you `vagrant ssh` you will be logging into this local machine.
@@ -127,6 +105,34 @@ Cucumber can be configured using many files such as:
 * `/.env`                           - store usernames/passwords or other variables (make sure this file is listed in '.gitignore' file)
 * `/cucumber.yml`                   - create Cucumber profiles that can easily be run from command line or from a build server
 * `/features/support/*_helpers.rb`  - create helper methods that will be reused frequently - incorporate some Object Oriented Programming techniques
+
+## Cucumber Practice
+
+You'll probably notice at this point that Cucumber passed some tests but some are still `pending`.  Yeah, you
+need to become oriented with this new web testing framework and practice your testing skills.
+
+You'll want to read through the three completed step_definitions to figure out how we accomplish the
+first few tasks spelled out in the `.feature` file.  You'll also want to find where the browser `DRIVER`
+was created that keeps getting reused.  You might also want to find out how Cucumber is starting and
+killing the PhantomJS service that you're utilizing as a headless browser!  And where'd the screenshots
+come from that are located in `/screenshots`?
+
+Here is a nice Ruby-Selenium [cheatsheet] (https://gist.github.com/huangzhichong/3284966) that could help you get started.
+
+Don't forget to finish these step_definitions:
+```
+When(/^the user clicks the cucumber link$/) do
+  pending # Write code here that will find and click the proper link
+  # Hint, you've already found the correct link element above
+  # and it has conveniently been assigned to an instance variable: '@link'
+end
+
+Then(/^that "([^"]*)" is displayed$/) do |webpage|
+  pending # Write code here that verifies we are at the proper URL
+  # Hint, it's easy to capture the current URL of a webpage.
+  # Google 'ruby selenium get current url' to find out how!
+end
+```
 
 ## .gitignore
 
