@@ -20,7 +20,7 @@ Lastly, there is a working `.feature` file with some passing tests.  However, tw
    1) Install VirtualBox  
    2) Install Vagrant  
    3) Download the [test-automation] (https://github.com/mthoreso/test-automation/archive/master.zip) repository (above, click 'Download ZIP') and place it in:  `C:\Cucumber\test-automation`  
-   4) In a command prompt move to the /test-automation directory (where your `Vagrantfile` lives) and run the following commands:  
+   4) In a command prompt move to the /test-automation directory (where your `Vagrantfile` lives) and run the following commands**:  
 
 ```
 $ vagrant up
@@ -38,7 +38,7 @@ $ vagrant ssh
 Running the 'cucumber' command above will run a short example test to show you it works.
 You may now create your own feature files, step_definitions, and other Cucumber configuration files.
 
-## Corporate Proxy
+## **Corporate Proxy
 
 If you are doing this at work and are behind a corporate proxy this all gets more complicated but,
 don't worry, we can (probably?) handle that here.
