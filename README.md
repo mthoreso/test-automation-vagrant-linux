@@ -1,7 +1,7 @@
 # test-automation-vagrant-linux
 
 This project provides the user with a development environment to run Cucumber tests.  
-The build is Ubuntu/Ruby/Cucumber/Selenium/PhantomJS.  In about 10 minutes you can be up and running.
+The build is **Ubuntu/Ruby/Cucumber/Selenium/PhantomJS**.  In about 10 minutes you can be up and running.
 
 There are a number of Cucumber advanced configurations included to orient the new user with the
 varying capabilities it provides.  
@@ -19,7 +19,7 @@ Lastly, there is a working `.feature` file with some passing tests.  However, tw
 
    1) Install VirtualBox  
    2) Install Vagrant  
-   3) Download the [test-automation] (https://github.com/mthoreso/test-automation/archive/master.zip) repository (above, click 'Download ZIP') and place it in:  `C:\Cucumber\test-automation`  
+   3) Download the [test-automation] (https://github.com/mthoreso/test-automation/archive/master.zip) repository (above, click **Download ZIP**) and place it in:  `C:\Cucumber\test-automation`  
    4) In a command prompt move to the /test-automation directory (where your `Vagrantfile` lives) and run the following commands**:  
 
 ```
@@ -27,7 +27,7 @@ $ vagrant up
 $ vagrant ssh
 ```
 
-   5) Now you will be logged into your Ubuntu virtual machine.  Change into the /vagrant directory - this
+   5) Now you will be logged into your Ubuntu virtual machine.  Change into the **/vagrant** directory - this
    will be mirrored to your 'test-automation' directory in Windows, allowing you to run Cucumber tests.
 
 ```
@@ -35,7 +35,7 @@ $ vagrant ssh
 [vagrant@test-automation vagrant]$ cucumber
 ```
 
-Running the 'cucumber' command above will run a short example test to show you it works.
+Running the `cucumber` command above will run a short example test to show you it works.
 You may now create your own feature files, step_definitions, and other Cucumber configuration files.
 
 ## **Corporate Proxy
@@ -45,14 +45,26 @@ don't worry, we can (probably?) handle that here.
 
 You'll need to do three things before you perform step 4 above:
 
-   4a) Create your `http_proxy` and `https_proxy` variables
+   4a) Create your `http_proxy` and `https_proxy` environment variables
+
+Linux:
 ```
 $ export http_proxy=http://<username>:<password>@proxy.example.com:<port>
 $ export https_proxy=_http://<username>:<password>@proxy.example.com:<port>
 ```
-
 Side Note: if you have special characters in your password you may need to replace them with the [hex values] (http://www.asciitable.com/) instead:
 Ex. `M@tt` becomes `M%40tt`
+
+Windows:
+It would be better for you to permanently set your 'http_proxy' and 'https_proxy' User environment variables.  You can do this by:  
+1) Open **Control Panel**  
+2) Select **System**  
+3) Click **Advanced system settings** on the left menu (you need administrator priviledges)  
+4) Go to the **Advanced** tab (at the top)  
+5) Click the **Environment Variables** button (near the bottom)  
+6) Look for **http_proxy** and **https_proxy** in the User section.  If they don't exist create them with just the proxy, not the user/password (Windows will use your login credentials for you):  
+* http://proxy.example.com:<port>
+* ex. http://webproxy.matt.com:80
 
    4b) Install the [Proxy Configuration Plugin for Vagrant] (https://github.com/tmatilai/vagrant-proxyconf).
 ```
