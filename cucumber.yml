@@ -1,0 +1,2 @@
+default: -r features/support/ -r features/step_definitions
+WEB: --tags @web -f html -o test-reports/cucumber_web.html -f pretty
