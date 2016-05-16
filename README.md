@@ -19,7 +19,7 @@ Lastly, there is a working `.feature` file with some passing tests.  However, tw
 
    1) Install VirtualBox  
    2) Install Vagrant  
-   3) Download the [test-automation] (https://github.com/mthoreso/test-automation/archive/master.zip) repository (above, click **Download ZIP**) and place it in:  `C:\Cucumber\test-automation`  
+   3) Download the [test-automation] (https://github.com/mthoreso/test-automation/archive/master.zip) repository (above, click **Download ZIP**) and unzip it to:  `C:\Cucumber\test-automation-vagrant-linux`  
    4) In a command prompt move to the /test-automation directory (where your `Vagrantfile` lives) and run the following commands**:  
 
 ```
