@@ -22,7 +22,7 @@ AfterConfiguration do |config|
   POSTMAN_DATA = YAML.load_file(File.join(File.dirname(__FILE__), '../../data/postman_data.yml'))
 
   # Set the HTTP Proxy for Rest-Client
-  RestClient.proxy = ENV['local_proxy']
+  #RestClient.proxy = ENV['local_proxy']
 
   # Starting PhantomJS server for headless browser testing
   startPhantom()
