@@ -13,8 +13,13 @@ Dotenv.load
 
 AfterConfiguration do |config|
   # This is a good place to load any configurations such as environments (test/pilot/prod)
+  #config_yml = YAML.load(ERB.new(File.read(File.join(File.dirname(__FILE__), '../../environment.yml'))).result)
+  #config_env = ENV['ENV'] || 'test'
+  #config = config_yml[config_env]
+  #CONFIG = config
 
   # You can load data files for use in your tests as well
+  POSTMAN_DATA = YAML.load_file(File.join(File.dirname(__FILE__), '../../data/postman_data.yml'))
 
   # Starting PhantomJS server for headless browser testing
   startPhantom()
