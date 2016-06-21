@@ -80,11 +80,14 @@ Vagrant.configure(2) do |config|
     apt-get -y purge $VAR3
     rm temp.txt
 
+    sudo apt-get -y upgrade
+    sudo apt-get -y install software-properties-common libstdc++5 libaio-dev git build-essential
     sudo apt-add-repository ppa:brightbox/ruby-ng
     sudo apt-get update
     sudo apt-get -y install ruby2.3 ruby2.3-dev
     ruby -v
 
+    sudo gem update --system
     cd /vagrant
     sudo gem install bundler
 
