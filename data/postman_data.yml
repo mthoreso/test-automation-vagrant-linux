@@ -1,0 +1,38 @@
+messages:
+  Basic-Auth-Success:
+    use_ssl: true
+    basic_auth: 'postman|password'
+    #authorization: 'Basic cG9zdG1hbjpwYXNzd29yZA=='
+    #cache-control: 'no-cache'
+    #postman-token: '8cebae7e-bba2-f31a-c792-9a7d79aefb60'
+  Auth-Request-Fail:
+    use_ssl: true
+    cache-control: 'no-cache'
+    postman-token: '1b316ca0-f7c1-2645-c624-8e6019fa9198'
+  Auth-Request-Success:
+    use_ssl: true
+    authorization: 'Digest username=\"postman\", realm=\"Users\", nonce=\"EDfFPsCb3eboJKkSBLgO6zTaasalyDYA\", uri=\"/digest-auth\", response=\"96bcfb7479b7d7b4b3de678d59cfb3e7\", opaque=\"\"'
+    cache-control: 'no-cache'
+    postman-token: '4cad1a08-fa32-4b9b-8c43-613f14bb263b'
+  OAuth-Pass:
+    use_ssl: true
+    content-type: 'multipart/form-data; boundary=---011000010111000001101001'
+    authorization: 'OAuth oauth_consumer_key=\"RKCGzna7bv9YD57c\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1442394747\",oauth_nonce=\"UIGipk\",oauth_version=\"1.0\",oauth_signature=\"CaeyGPr2mns1WCq4Cpm5aLvz6Gs=\"'
+    cache-control: 'no-cache'
+    postman-token: 'c437679b-0f0a-a0b4-03d1-2536cbdefca1'
+    body: "-----011000010111000001101001\r\nContent-Disposition: form-data; name=\"code\"\r\n\r\nxWnkliVQJURqB2x1\r\n-----011000010111000001101001\r\nContent-Disposition: form-data; name=\"grant_type\"\r\n\r\nauthorization_code\r\n-----011000010111000001101001\r\nContent-Disposition: form-data; name=\"redirect_uri\"\r\n\r\nhttps://www.getpostman.com/oauth2/callback\r\n-----011000010111000001101001\r\nContent-Disposition: form-data; name=\"client_id\"\r\n\r\nabc123\r\n-----011000010111000001101001\r\nContent-Disposition: form-data; name=\"client_secret\"\r\n\r\nssh-secret\r\n-----011000010111000001101001--"
+
+responses:
+  Basic-Auth-Success:
+    read_body: '{"authenticated":true}'
+    code: 200
+  Auth-Request-Fail:
+    read_body: Unauthorized
+    code: 401
+  Auth-Request-Success:
+    read_body: '{"authenticated":true}'
+    code: 200
+  OAuth-Pass:
+    read_body: '{"status":"pass","message":"OAuth-1.0a signature verification was successful"}'
+    code: 200
+
