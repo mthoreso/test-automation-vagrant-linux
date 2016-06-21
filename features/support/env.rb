@@ -1,8 +1,12 @@
 require 'rubygems'
 require 'bundler/setup'
 #require 'selenium-webdriver'
-#require 'colorize'
+require 'colorize'
 require 'open3'
+require 'rest-client'
+require 'json'
+require 'uri'
+require 'net/http'
 
 Bundler.require(:default)
 Dotenv.load
